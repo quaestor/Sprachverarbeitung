@@ -31,5 +31,5 @@ def disambiguateWordSenses(sentence, word):
               result = synset
    return result
 
-# disambiguateWordSenses('sitting on a bank', 'bank')
+# disambiguateWordSenses('sitting on a bench', 'bench')
 # wn.synset('bank.n.01').definition
