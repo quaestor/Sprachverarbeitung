@@ -1,0 +1,50 @@
+UNKNOWN	Unbekanntes Tag aus Einlesen aus Korpusdatei
+--	<Nicht zugeordnet>
+ADJA	Attributives Adjektiv
+ADJD	Adverbiales oder prädikatives Adjektiv
+ADV	Adverb
+APPR	Präposition; Zirkumposition links
+APPRART	Präposition mit Artikel
+APPO	Postposition
+APZR	Zirkumposition rechts
+ART	Bestimmter oder unbestimmter Artikel
+CARD	Kardinalzahl
+FM	Fremdsprachliches Material
+ITJ	Interjektion
+KOUI	Unterordnende Konjunktion mit zu und Infinitiv
+KOUS	Unterordnende Konjunktion mit Satz
+KON	Nebenordnende Konjunktion
+KOKOM	Vergleichspartikel, ohne Satz
+NN	Normales Nomen
+NE	Eigennamen
+PDS	Substituierendes Demonstrativpronomen
+PDAT	Attribuierendes Demonstrativpronomen
+PIS	Substituierendes Indefinitpronomen
+PIAT	Attribuierendes Indefinitpronomen
+PPER	Ersetzbares Personalpronomen
+PPOSS	Substituierendes Possessivpronomen
+PPOSAT	Attribuierendes Possessivpronomen
+PRELS	Substituierendes Relativpronomen
+PRELAT	Attribuierendes Relativpronomen
+PRF	Reflexives Personalpronomen
+PWS	Substituierendes Interrogativpronomen
+PWAT	Attribuierendes Interrogativpronomen
+PWAV	Adverbiales Interrogativ- oder Relativpronomen
+PROAV	Pronominaladverb
+PTKZU	zu vor Infinitiv
+PTKNEG	Negationspartikel
+PTKVZ	Abgetrennter Verbzusatz
+PTKANT	Antwortpartikel
+PTKA	Partikel bei Adjektiv oder Adverb
+TRUNC	Kompositions-Erstglied
+VVFIN	Finites Verb, voll
+VVIMP	Imperativ, voll
+VVINF	Infinitiv, voll
+VVIZU	Infinitiv mit zu, voll
+VVPP	Partizip Perfekt, voll
+VAFIN	Finites Verb, aux
+VAIMP	Imperativ, aux
+VAINF	Infinitiv, aux
+VAPP	Partizip Perfekt, aux
+VMFIN	Finites Verb, modal
+VMINF	Infinitiv, modal

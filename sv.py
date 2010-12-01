@@ -1,3 +1,4 @@
+# vim: set fileencoding=utf-8 :
 from __future__		import division
 import nltk
 import re
@@ -117,4 +118,24 @@ def anneal(text, segs, iterations, cooling_rate):
 	return segs
 
 def read_tagged_text(text):
-	map(lambda t: re.split(r'/', t), re.split(r'[ \n]+', text))
+	return map(lambda t: re.split(r'/', t), re.split(r'[ \n]+', text))
+
+def load_tiger_corpus(path=None):
+	if(path == None):
+		path = nltk.data.find('corpora/tigercorpus')
+	return nltk.corpus.TaggedCorpusReader(path, 'tc', encoding='utf-8')
+
+def rate_tagged(guess, golden):
+	return sum([guess[i] == golden[i] for i in range(0,len(guess))]) / len(guess) * 100
+
+def reg_tag(words, patterns):
+	regexp_tagger = nltk.RegexpTagger(patterns)
+	return regexp_tagger.tag(words)
+
+def pattern_german_nouns(corpus, tag):
+	tag_words = [w[0] for w in corpus.tagged_words() if w[1] == tag]
+	start = sorted(set([w[:3] for w in tag_words if w.isalpha() and w[1:3].islower() and len(w) >= 3]))
+	ending = sorted(set([w[:3] for w in tag_words if w.isalpha() and w.islower() and len(w) >= 3]))
+	return '^(' + '|'.join(start) + ').*(' + '|'.join(end) + ')$'
+
+
