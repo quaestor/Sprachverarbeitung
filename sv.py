@@ -132,10 +132,14 @@ def reg_tag(words, patterns):
 	regexp_tagger = nltk.RegexpTagger(patterns)
 	return regexp_tagger.tag(words)
 
-def pattern_german_nouns(corpus, tag):
-	tag_words = [w[0] for w in corpus.tagged_words() if w[1] == tag]
-	start = sorted(set([w[:3] for w in tag_words if w.isalpha() and w[1:3].islower() and len(w) >= 3]))
-	ending = sorted(set([w[:3] for w in tag_words if w.isalpha() and w.islower() and len(w) >= 3]))
-	return '^(' + '|'.join(start) + ').*(' + '|'.join(end) + ')$'
+def tagpattern(tagged_words,  tag):
+	tag_words = [w[0] for w in tagged_words if w[1]  == tag]
+	start = sorted(list(set([w[:3] for w in tag_words if w.isalpha() and len(w) >= 3])))
+	end = sorted(list(set([w[-3:] for w in tag_words if w.isalpha() and w[-3:].islower() and len(w) >= 3])))
+	return ("^("+"|".join(start)+").*("+"|".join(end)+")$",  tag)
 
+def tags(tagged_words):
+	return set([w[1] for w in tagged_words])
 
+def tagpatterns(corpus):
+	return [tagpattern(corpus,  tag) for tag in tags(corpus)]
